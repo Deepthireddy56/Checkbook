@@ -50,3 +50,12 @@ function updateCheckbook() {
     document.getElementById('checkAmountWords').textContent = amount && !isNaN(amount) ? numToWord(amount) : "" ;
     document.getElementById('checkDate').textContent = new Date().toISOString().split('T')[0];
 }
+
+
+
+
+
+// indentation is Good
+// Variable Names are Good
+// Meaning Full usage
+//comments : By using colspan in your Table <td> it was good for visible
