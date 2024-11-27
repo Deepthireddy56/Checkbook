@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkbook</title>
+    <script src="Program.js"></script>
+    <style>
+          .container {
+            margin-bottom: 20px;
+          }
+          .container label {
+            display: block;
+            margin: 5px 0;
+          }
+        .checkbook {
+            width: 100%;
+            max-width: 600px;
+            border: 1px solid ;
+            padding: 10px;
+        }
+        .checkbook table {
+            width: 100%;
+            border-collapse: collapse;
+          }
+          .checkbook th, .checkbook td {
+            padding: 5px;
+          }
+    </style>
+</head>
+<body>
+    <center><h1>Fill the Details</h1>
+    <div class="container" >
+        <label>
+            Account No.:
+            <input type="number" name="accountNo" id="accountNo" placeholder="Enter account number" onkeydown="updateCheckbook()">
+        </label> 
+        <label>
+            Name:
+            <input type="text" name="name" id="name" placeholder="Enter name" onkeydown="updateCheckbook()">
+        </label>
+        <label>
+            Amount (Max:999):
+            <input type="number" name="amount" id="amount" placeholder="Enter amount" onkeyup="updateCheckbook()">
+        </label>
+    </div>        
+        <div><p><h1>Checkbook</h1></p></div>
+    <div class="checkbook">
+        <table border="1">
+            <tr>
+                <td><strong>Account No.:</strong></td>
+                <td colspan="2"><span id="checkAccountNo" class="field-value"></span></td>
+                <td>Date:</td>
+                <td class="date"><span id="checkDate" class="field-value"></span></td>
+            </tr>
+            <tr>
+                <td><strong>Name:</strong></td>
+                <td colspan="3"><span id="checkName" class="field-value"></span></td>
+            </tr>
+            <tr>
+                <td><strong>Amount:</strong></td>
+                <td colspan="3"><span id="checkAmount" class="field-value"></span></td>
+            </tr>
+            <tr>
+                <td><strong>Amount in Words:</strong></td>
+                <td colspan="3"><span id="checkAmountWords" class="field-value"></span></td>
+            </tr>
+        </table>
+      </div>     
+        <button type="submit">Submit</button>      
+    </center> 
+        
+</body>
+</html>
